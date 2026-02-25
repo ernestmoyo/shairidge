@@ -1,62 +1,92 @@
 [
   {
-    "id": "financial-advisory",
-    "name": "Financial Advisory & Planning",
-    "title": "Comprehensive Financial Strategy",
+    "id": "financial-management",
+    "name": "Financial Management",
+    "title": "Management Accounts & Financial Statements",
     "icon": "LineChart",
-    "description": "Develop a comprehensive financial strategy tailored to your unique goals and circumstances. Our expert advisors work with you to create a roadmap for wealth accumulation, retirement planning, and long-term financial security.",
+    "description": "We specialize in producing accurate management accounts and annual financial statements. Beyond preparation, we provide training and guidance on how to analyze and interpret these reports for informed decision-making.",
     "benefits": [
-      "Personalized financial planning",
-      "Investment strategy optimization",
-      "Retirement planning",
-      "Wealth preservation strategies",
-      "Tax-efficient investing"
+      "Management accounts preparation",
+      "Annual financial statements",
+      "Financial report analysis & interpretation",
+      "Audit preparation",
+      "Training on financial reporting"
+    ],
+    "slug": "financial-management"
+  },
+  {
+    "id": "cashflow-management",
+    "name": "Cashflow Management",
+    "title": "Working Capital Optimization",
+    "icon": "TrendingUp",
+    "description": "Our services include assisting clients in increasing effectiveness in management of cash flows, debtors, creditors, and inventory. We help businesses maintain liquidity and optimize resources to support sustainable growth.",
+    "benefits": [
+      "Cash flow optimization",
+      "Debtors & creditors management",
+      "Inventory optimization",
+      "Liquidity management",
+      "Working capital strategy"
+    ],
+    "slug": "cashflow-management"
+  },
+  {
+    "id": "internal-controls",
+    "name": "Internal Controls",
+    "title": "Standard Operating Procedures (SOPs)",
+    "icon": "Shield",
+    "description": "We assist in establishing and implementing internal controls and SOPs to safeguard assets, reduce risks, and ensure operational consistency.",
+    "benefits": [
+      "Internal controls setup",
+      "Standard operating procedures",
+      "Asset safeguarding",
+      "Risk reduction",
+      "Operational consistency"
+    ],
+    "slug": "internal-controls"
+  },
+  {
+    "id": "financial-advisory",
+    "name": "Financial Advisory",
+    "title": "Funding & Bankability",
+    "icon": "DollarSign",
+    "description": "We provide advisory support for raising capital. This includes preparing financial models, projections, and documentation to strengthen credibility with investors and lenders. We also assist clients to ensure their operations make them bankable.",
+    "benefits": [
+      "Capital raising support",
+      "Financial modelling & projections",
+      "Investor documentation",
+      "Bankability assessment",
+      "Mergers & acquisitions advisory"
     ],
     "slug": "financial-advisory"
   },
   {
     "id": "business-consulting",
     "name": "Business Consulting",
-    "title": "Strategic Business Growth",
+    "title": "Strategy & Organizational Development",
     "icon": "Briefcase",
-    "description": "Transform your business with strategic consulting services. We help organizations identify opportunities, solve complex challenges, and implement sustainable growth strategies.",
+    "description": "We help articulate your vision, mission, and strategy, and translate them into actionable business plans and projections. We support the setup of boards and efficient organizational structures, ensuring accountability and oversight.",
     "benefits": [
-      "Business strategy development",
-      "Operational efficiency",
-      "Market analysis and positioning",
-      "Organizational restructuring",
-      "Performance optimization"
+      "Strategy & business plans",
+      "Governance & organizational structure",
+      "Training & productivity programs",
+      "Culture & conflict management",
+      "Change management"
     ],
     "slug": "business-consulting"
   },
   {
-    "id": "tax-planning",
-    "name": "Tax Planning & Strategy",
-    "title": "Maximize Tax Efficiency",
-    "icon": "DollarSign",
-    "description": "Minimize your tax burden through strategic planning and expert guidance. Our tax specialists develop customized strategies to ensure you're taking advantage of all available deductions and credits.",
+    "id": "digital-transformation",
+    "name": "Digital Transformation",
+    "title": "Embrace Digital Innovation",
+    "icon": "Cpu",
+    "description": "Transitioning from manual systems to automated, digital-first processes. Improving reporting efficiency and accuracy. Simplifying AI and data management to make them practical and accessible for business growth.",
     "benefits": [
-      "Tax strategy optimization",
-      "Deduction maximization",
-      "Business tax planning",
-      "Personal tax strategy",
-      "Regulatory compliance"
+      "Process automation",
+      "Digital-first transition",
+      "Reporting efficiency & accuracy",
+      "AI & data management",
+      "Technology adoption strategy"
     ],
-    "slug": "tax-planning"
-  },
-  {
-    "id": "cash-flow",
-    "name": "Cash Flow Management",
-    "title": "Optimize Your Cash Position",
-    "icon": "TrendingUp",
-    "description": "Improve liquidity and operational efficiency with expert cash flow management. We help businesses maintain healthy cash positions and optimize working capital.",
-    "benefits": [
-      "Cash flow forecasting",
-      "Working capital optimization",
-      "Liquidity management",
-      "Payment strategy development",
-      "Financial reporting"
-    ],
-    "slug": "cash-flow"
+    "slug": "digital-transformation"
   }
 ]

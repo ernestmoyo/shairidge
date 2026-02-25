@@ -1,5 +1,6 @@
 import { TeamMember } from '@/types/business'
 import { FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
 
 interface TeamCardProps {
   member: TeamMember
@@ -8,10 +9,20 @@ interface TeamCardProps {
 export const TeamCard = ({ member }: TeamCardProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-      {/* Image placeholder */}
-      <div className="w-full h-80 bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-6xl font-bold">
-        {member.name.charAt(0)}
-      </div>
+      {member.image ? (
+        <div className="w-full h-80 relative">
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover object-top"
+          />
+        </div>
+      ) : (
+        <div className="w-full h-80 bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-6xl font-bold">
+          {member.name.charAt(0)}
+        </div>
+      )}
 
       {/* Content */}
       <div className="p-6">

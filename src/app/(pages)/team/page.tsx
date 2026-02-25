@@ -2,25 +2,15 @@ import type { Metadata } from 'next'
 import { TeamCard } from '@/components/cards/TeamCard'
 import { Button } from '@/components/common/Button'
 import Link from 'next/link'
+import teamData from '../../../../public/data/team.json'
 
 export const metadata: Metadata = {
   title: 'Our Team | Shairidge Financial Advisors',
   description: 'Meet our experienced team of financial and business consultants.',
 }
 
-async function getTeamMembers() {
-  try {
-    const response = await fetch('http://localhost:3000/data/team.json', {
-      next: { revalidate: 60 },
-    })
-    return response.json()
-  } catch {
-    return []
-  }
-}
-
-export default async function TeamPage() {
-  const team = await getTeamMembers()
+export default function TeamPage() {
+  const team = teamData.filter((member: any) => member.name)
 
   return (
     <div>
@@ -44,10 +34,9 @@ export default async function TeamPage() {
               About Shairidge
             </h2>
             <p className="text-gray-600 text-lg mb-4">
-              With over 15 years of combined experience in financial services and business consulting,
-              Shairidge has built a reputation for delivering exceptional results. Our team comprises
-              certified financial advisors, business strategists, and tax experts committed to helping
-              our clients achieve their goals.
+              Our company collaborates with businesses to enhance resilience, efficiency, and
+              preparedness for the future by merging financial expertise, operational excellence,
+              and digital innovation.
             </p>
             <p className="text-gray-600 text-lg mb-4">
               We believe in building long-term relationships based on trust, transparency, and
@@ -60,13 +49,13 @@ export default async function TeamPage() {
               <div className="p-6 bg-blue-50 rounded-lg">
                 <h3 className="font-poppins text-xl font-bold text-primary mb-3">Mission</h3>
                 <p className="text-gray-600">
-                  To empower individuals and businesses with strategic financial guidance and consulting expertise.
+                  To empower businesses to thrive by combining financial discipline, strategic clarity, and digital innovation. We partner with organizations to optimize operations, strengthen governance, and embrace technology.
                 </p>
               </div>
               <div className="p-6 bg-teal-50 rounded-lg">
                 <h3 className="font-poppins text-xl font-bold text-secondary mb-3">Vision</h3>
                 <p className="text-gray-600">
-                  To be the most trusted financial and business consulting partner for sustainable growth.
+                  To be recognized as the leading advisor that transforms complexity into clarity, helping organizations thrive in the digital age.
                 </p>
               </div>
               <div className="p-6 bg-yellow-50 rounded-lg">

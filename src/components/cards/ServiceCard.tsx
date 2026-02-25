@@ -12,6 +12,8 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
     Briefcase: '💼',
     DollarSign: '$',
     TrendingUp: '📊',
+    Shield: '🛡️',
+    Cpu: '💻',
   }
 
   return (

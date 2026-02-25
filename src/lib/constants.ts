@@ -1,5 +1,5 @@
 // WhatsApp Configuration
-export const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+1234567890'
+export const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+27818946763'
 export const WHATSAPP_MESSAGE = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE || 'Hello Shairidge'
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE
@@ -31,7 +31,7 @@ export const COLORS = {
 // Contact Information (to be filled from business documents)
 export const CONTACT_INFO = {
   email: 'inquiries@shairidge.com',
-  phone: '+1-234-567-8900',
+  phone: '+27 81 894 6763',
   address: 'Your Business Address',
   hours: 'Monday - Friday, 9:00 AM - 5:00 PM',
 }

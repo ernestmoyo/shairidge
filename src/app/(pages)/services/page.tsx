@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ServiceCard } from '@/components/cards/ServiceCard'
 import { Button } from '@/components/common/Button'
 import Link from 'next/link'
+import servicesData from '../../../../public/data/services.json'
 
 export const metadata: Metadata = {
   title: 'Our Services | Shairidge Financial Advisors',
@@ -12,23 +13,23 @@ export const metadata: Metadata = {
 const processSteps = [
   {
     number: 1,
-    title: 'Discovery & Assessment',
-    description: 'We understand your unique situation, goals, and challenges through in-depth consultations.',
+    title: 'Understanding Your Needs',
+    description: 'Analyzing challenges and opportunities, understanding client needs and objectives.',
   },
   {
     number: 2,
-    title: 'Strategy Development',
-    description: 'Our experts create customized strategies tailored to your specific needs and objectives.',
+    title: 'Tailored Solutions',
+    description: 'Crafting customized solutions aligned with your unique business goals and circumstances.',
   },
   {
     number: 3,
-    title: 'Implementation',
-    description: 'We execute the strategy with precision and keep you informed every step of the way.',
+    title: 'Precise Implementation',
+    description: 'Implementing with precision and efficiency, keeping you informed every step of the way.',
   },
   {
     number: 4,
-    title: 'Monitoring & Optimization',
-    description: 'Continuous monitoring and regular reviews ensure optimal results and timely adjustments.',
+    title: 'Continuous Improvement',
+    description: 'Monitoring outcomes and fostering continuous improvement for lasting results.',
   },
 ]
 
@@ -56,19 +57,8 @@ const faqs = [
   },
 ]
 
-async function getServices() {
-  try {
-    const response = await fetch('http://localhost:3000/data/services.json', {
-      next: { revalidate: 60 },
-    })
-    return response.json()
-  } catch {
-    return []
-  }
-}
-
-export default async function ServicesPage() {
-  const services = await getServices()
+export default function ServicesPage() {
+  const services = servicesData
 
   return (
     <div>

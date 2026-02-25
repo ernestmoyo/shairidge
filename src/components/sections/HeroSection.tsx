@@ -15,11 +15,11 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center py-20">
         <h1 className="font-poppins text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          Strategic Financial Guidance<br />for Your Future
+          Driving Growth Through Strategy,<br />Finance & Digital Innovation
         </h1>
 
         <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-          Expert financial advisory and business consulting services tailored to help you achieve your goals and build lasting wealth.
+          We help businesses strengthen financial discipline, optimize operations, and embrace digital transformation for measurable impact.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
