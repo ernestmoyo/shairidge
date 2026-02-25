@@ -2,6 +2,7 @@
 
 import { ServiceCard } from '@/components/cards/ServiceCard'
 import { Button } from '@/components/common/Button'
+import { ScaleIn } from '@/components/common/Animations'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Service } from '@/types/business'
@@ -38,8 +39,10 @@ export const HomeServicesSection = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+          {services.map((service, idx) => (
+            <ScaleIn key={service.id} delay={idx * 0.1} duration={0.5}>
+              <ServiceCard service={service} />
+            </ScaleIn>
           ))}
         </div>
 

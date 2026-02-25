@@ -2,6 +2,7 @@
 
 import { TeamCard } from '@/components/cards/TeamCard'
 import { Button } from '@/components/common/Button'
+import { ScaleIn } from '@/components/common/Animations'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { TeamMember } from '@/types/business'
@@ -38,8 +39,10 @@ export const HomeTeamSection = () => {
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {team.map((member) => (
-            <TeamCard key={member.id} member={member} />
+          {team.map((member, idx) => (
+            <ScaleIn key={member.id} delay={idx * 0.1} duration={0.5}>
+              <TeamCard member={member} />
+            </ScaleIn>
           ))}
         </div>
 
