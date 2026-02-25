@@ -1,0 +1,44 @@
+[
+  {
+    "id": "member-1",
+    "name": "Strategic Leadership Name",
+    "title": "Founder & Chief Advisor",
+    "bio": "With over 15 years of experience in financial services and strategic business consulting, our founder leads with vision and integrity. Dedicated to helping clients achieve their financial and business goals.",
+    "image": "/images/team/member-1.jpg",
+    "expertise": [
+      "Financial Planning",
+      "Strategic Advisory",
+      "Business Development",
+      "Risk Management"
+    ],
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "member-2",
+    "name": "Senior Consultant Name",
+    "title": "Senior Financial Consultant",
+    "bio": "Specializing in tax strategy and business optimization, brings deep expertise in helping businesses scale efficiently. Passionate about creating sustainable growth strategies.",
+    "image": "/images/team/member-2.jpg",
+    "expertise": [
+      "Tax Strategy",
+      "Business Optimization",
+      "Financial Analysis",
+      "Compliance"
+    ],
+    "linkedinUrl": "https://linkedin.com"
+  },
+  {
+    "id": "member-3",
+    "name": "Investment Specialist Name",
+    "title": "Investment Strategy Manager",
+    "bio": "Focused on portfolio management and investment strategy, helps clients navigate market complexities and build wealth systematically through intelligent investment decisions.",
+    "image": "/images/team/member-3.jpg",
+    "expertise": [
+      "Investment Management",
+      "Portfolio Strategy",
+      "Market Analysis",
+      "Wealth Planning"
+    ],
+    "linkedinUrl": "https://linkedin.com"
+  }
+]

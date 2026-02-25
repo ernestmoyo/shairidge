@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Poppins, Inter } from 'next/font/google'
 import '@/styles/globals.css'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { WhatsAppWidget } from '@/components/common/WhatsAppWidget'
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -40,8 +43,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
-        {children}
+      <body className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   )

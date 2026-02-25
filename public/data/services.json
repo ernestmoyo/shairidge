@@ -1,0 +1,62 @@
+[
+  {
+    "id": "financial-advisory",
+    "name": "Financial Advisory & Planning",
+    "title": "Comprehensive Financial Strategy",
+    "icon": "LineChart",
+    "description": "Develop a comprehensive financial strategy tailored to your unique goals and circumstances. Our expert advisors work with you to create a roadmap for wealth accumulation, retirement planning, and long-term financial security.",
+    "benefits": [
+      "Personalized financial planning",
+      "Investment strategy optimization",
+      "Retirement planning",
+      "Wealth preservation strategies",
+      "Tax-efficient investing"
+    ],
+    "slug": "financial-advisory"
+  },
+  {
+    "id": "business-consulting",
+    "name": "Business Consulting",
+    "title": "Strategic Business Growth",
+    "icon": "Briefcase",
+    "description": "Transform your business with strategic consulting services. We help organizations identify opportunities, solve complex challenges, and implement sustainable growth strategies.",
+    "benefits": [
+      "Business strategy development",
+      "Operational efficiency",
+      "Market analysis and positioning",
+      "Organizational restructuring",
+      "Performance optimization"
+    ],
+    "slug": "business-consulting"
+  },
+  {
+    "id": "tax-planning",
+    "name": "Tax Planning & Strategy",
+    "title": "Maximize Tax Efficiency",
+    "icon": "DollarSign",
+    "description": "Minimize your tax burden through strategic planning and expert guidance. Our tax specialists develop customized strategies to ensure you're taking advantage of all available deductions and credits.",
+    "benefits": [
+      "Tax strategy optimization",
+      "Deduction maximization",
+      "Business tax planning",
+      "Personal tax strategy",
+      "Regulatory compliance"
+    ],
+    "slug": "tax-planning"
+  },
+  {
+    "id": "cash-flow",
+    "name": "Cash Flow Management",
+    "title": "Optimize Your Cash Position",
+    "icon": "TrendingUp",
+    "description": "Improve liquidity and operational efficiency with expert cash flow management. We help businesses maintain healthy cash positions and optimize working capital.",
+    "benefits": [
+      "Cash flow forecasting",
+      "Working capital optimization",
+      "Liquidity management",
+      "Payment strategy development",
+      "Financial reporting"
+    ],
+    "slug": "cash-flow"
+  }
+]
