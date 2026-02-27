@@ -5,19 +5,19 @@ import { Button } from '@/components/common/Button'
 
 export const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+    <section className="py-20 bg-primary text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="font-serif text-3xl md:text-4xl mb-5 text-white">
           Ready to Transform Your Financial Future?
         </h2>
 
-        <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
           Get in touch with our team today and discover how we can help you achieve your financial goals.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact">
-            <Button size="lg" className="bg-accent hover:bg-yellow-600">
+            <Button size="lg" className="bg-accent hover:bg-[#a3832a] text-white">
               Schedule a Consultation
             </Button>
           </Link>
@@ -26,7 +26,7 @@ export const CTASection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white hover:text-primary">
               Chat on WhatsApp
             </Button>
           </a>

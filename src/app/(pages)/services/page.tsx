@@ -63,19 +63,19 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-poppins text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl mb-5 text-white">
             Our Services
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Comprehensive financial and business solutions tailored to your unique needs
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-surface">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service: any) => (
@@ -86,22 +86,22 @@ export default function ServicesPage() {
       </section>
 
       {/* Our Process */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center text-primary mb-16">
+          <h2 className="font-serif text-3xl md:text-[2.5rem] text-center text-primary mb-14">
             Our Process
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {processSteps.map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4">
+                <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-serif text-lg mx-auto mb-4">
                   {step.number}
                 </div>
-                <h3 className="font-poppins text-xl font-bold text-primary mb-2">
+                <h3 className="font-serif text-lg text-primary mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-500 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -109,19 +109,19 @@ export default function ServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-surface">
         <div className="container mx-auto px-4">
-          <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center text-primary mb-16">
+          <h2 className="font-serif text-3xl md:text-[2.5rem] text-center text-primary mb-14">
             Frequently Asked Questions
           </h2>
 
-          <div className="max-w-3xl mx-auto space-y-8">
+          <div className="max-w-3xl mx-auto space-y-6">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-poppins text-xl font-bold text-primary mb-3">
+              <div key={idx} className="bg-white p-6 rounded-lg shadow-subtle border border-gray-100">
+                <h3 className="font-serif text-lg text-primary mb-2">
                   {faq.question}
                 </h3>
-                <p className="text-gray-600">{faq.answer}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -129,16 +129,16 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl mb-5 text-white">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Let&#39;s discuss which services are right for your unique situation.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="bg-accent hover:bg-yellow-600">
+            <Button size="lg" className="bg-accent hover:bg-[#a3832a] text-white">
               Schedule Your Consultation
             </Button>
           </Link>

@@ -25,14 +25,14 @@ export const HomeServicesSection = () => {
   }, [])
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-24 bg-surface">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-14">
+          <h2 className="font-serif text-3xl md:text-[2.5rem] text-primary mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Comprehensive financial and business consulting solutions designed to drive your success
           </p>
         </div>
@@ -49,7 +49,7 @@ export const HomeServicesSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Link href="/services">
-            <Button size="lg" variant="primary">
+            <Button size="lg" variant="outline">
               View All Services
             </Button>
           </Link>

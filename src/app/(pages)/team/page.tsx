@@ -15,52 +15,52 @@ export default function TeamPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-poppins text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="font-serif text-4xl md:text-5xl mb-5 text-white">
             Meet Our Team
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Experienced professionals dedicated to your financial success and business growth
           </p>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-poppins text-4xl font-bold text-primary mb-6">
+            <h2 className="font-serif text-3xl text-primary mb-5">
               About Shairidge
             </h2>
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-500 text-base mb-4 leading-relaxed">
               Our company collaborates with businesses to enhance resilience, efficiency, and
               preparedness for the future by merging financial expertise, operational excellence,
               and digital innovation.
             </p>
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-500 text-base mb-4 leading-relaxed">
               We believe in building long-term relationships based on trust, transparency, and
               personalized service. Every client is unique, and we tailor our approach to match your
               specific needs and objectives.
             </p>
 
             {/* Mission & Values */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="p-6 bg-blue-50 rounded-lg">
-                <h3 className="font-poppins text-xl font-bold text-primary mb-3">Mission</h3>
-                <p className="text-gray-600">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+              <div className="p-6 bg-surface rounded-lg border border-gray-100">
+                <h3 className="font-serif text-lg text-primary mb-3">Mission</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
                   To empower businesses to thrive by combining financial discipline, strategic clarity, and digital innovation. We partner with organizations to optimize operations, strengthen governance, and embrace technology.
                 </p>
               </div>
-              <div className="p-6 bg-teal-50 rounded-lg">
-                <h3 className="font-poppins text-xl font-bold text-secondary mb-3">Vision</h3>
-                <p className="text-gray-600">
+              <div className="p-6 bg-surface rounded-lg border border-gray-100">
+                <h3 className="font-serif text-lg text-secondary mb-3">Vision</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
                   To be recognized as the leading advisor that transforms complexity into clarity, helping organizations thrive in the digital age.
                 </p>
               </div>
-              <div className="p-6 bg-yellow-50 rounded-lg">
-                <h3 className="font-poppins text-xl font-bold text-accent mb-3">Values</h3>
-                <p className="text-gray-600">
+              <div className="p-6 bg-surface rounded-lg border border-gray-100">
+                <h3 className="font-serif text-lg text-accent mb-3">Values</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
                   Integrity, excellence, client focus, and continuous innovation drive everything we do.
                 </p>
               </div>
@@ -70,9 +70,9 @@ export default function TeamPage() {
       </section>
 
       {/* Team Members */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-surface">
         <div className="container mx-auto px-4">
-          <h2 className="font-poppins text-4xl font-bold text-center text-primary mb-16">
+          <h2 className="font-serif text-3xl text-center text-primary mb-14">
             Our Experts
           </h2>
 
@@ -85,13 +85,13 @@ export default function TeamPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="font-poppins text-4xl font-bold text-center text-primary mb-16">
+          <h2 className="font-serif text-3xl text-center text-primary mb-14">
             Why Choose Us
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
                 title: 'Expertise',
@@ -110,11 +110,11 @@ export default function TeamPage() {
                 description: 'Focused on delivering measurable results and long-term value.',
               },
             ].map((item, idx) => (
-              <div key={idx} className="p-6 border-l-4 border-accent">
-                <h3 className="font-poppins text-xl font-bold text-primary mb-2">
+              <div key={idx} className="p-6 border-l-2 border-accent">
+                <h3 className="font-serif text-lg text-primary mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600">{item.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -122,16 +122,16 @@ export default function TeamPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-poppins text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl mb-5 text-white">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Get in touch with our team today and let&#39;s discuss how we can help you succeed.
           </p>
           <Link href="/contact">
-            <Button size="lg" className="bg-accent hover:bg-yellow-600">
+            <Button size="lg" className="bg-accent hover:bg-[#a3832a] text-white">
               Contact Us
             </Button>
           </Link>

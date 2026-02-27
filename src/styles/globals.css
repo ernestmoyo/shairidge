@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
 :root {
-  --primary-blue: #1e3a8a;
-  --secondary-teal: #0d9488;
-  --accent-gold: #d97706;
-  --text-dark: #1f2937;
-  --bg-light: #f9fafb;
+  --primary: #1A2B4A;
+  --secondary: #3B4F6B;
+  --accent: #B8962E;
+  --text-dark: #2C3E50;
+  --bg-light: #F8F7F4;
+  --bg-alt: #F0EDE8;
+  --charcoal: #1C1C1E;
 }
 
 * {
@@ -23,39 +23,40 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   color: var(--text-dark);
   background-color: var(--bg-light);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-family: var(--font-dm-serif), 'DM Serif Display', serif;
+  font-weight: 400;
   margin-bottom: 1rem;
+  color: var(--primary);
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.3;
 }
 
 h3 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   line-height: 1.4;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 h6 {
@@ -68,24 +69,24 @@ p {
 }
 
 a {
-  color: var(--primary-blue);
+  color: var(--primary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--secondary-teal);
+  color: var(--accent);
 }
 
 button {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
 
   h2 {

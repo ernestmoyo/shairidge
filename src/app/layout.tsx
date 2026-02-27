@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
-import { Poppins, Inter } from 'next/font/google'
+import { DM_Serif_Display, Inter } from 'next/font/google'
 import Script from 'next/script'
 import '@/styles/globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { WhatsAppWidget } from '@/components/common/WhatsAppWidget'
 
-const poppins = Poppins({
-  variable: '--font-poppins',
+const dmSerif = DM_Serif_Display({
+  variable: '--font-dm-serif',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400'],
   display: 'swap',
 })
 
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+    <html lang="en" className={`${dmSerif.variable} ${inter.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

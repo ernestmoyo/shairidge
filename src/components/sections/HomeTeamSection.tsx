@@ -25,14 +25,14 @@ export const HomeTeamSection = () => {
   }, [])
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-14">
+          <h2 className="font-serif text-3xl md:text-[2.5rem] text-primary mb-4">
             Meet Our Team
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Experienced professionals dedicated to your financial success
           </p>
         </div>
@@ -49,7 +49,7 @@ export const HomeTeamSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Link href="/team">
-            <Button size="lg" variant="secondary">
+            <Button size="lg" variant="outline">
               Meet the Full Team
             </Button>
           </Link>

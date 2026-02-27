@@ -5,49 +5,48 @@ import { Button } from '@/components/common/Button'
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-primary via-blue-800 to-secondary text-white flex items-center justify-center overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+    <section className="relative bg-primary text-white flex items-center justify-center overflow-hidden" style={{ minHeight: '80vh' }}>
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.04]">
+        <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%)', backgroundSize: '60px 60px', backgroundPosition: '0 0, 30px 30px' }}></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center py-20">
-        <h1 className="font-poppins text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      <div className="relative z-10 container mx-auto px-4 text-center py-16">
+        <h1 className="font-serif text-4xl md:text-[3.5rem] leading-tight mb-6">
           Driving Growth Through Strategy,<br />Finance & Digital Innovation
         </h1>
 
-        <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
           We help businesses strengthen financial discipline, optimize operations, and embrace digital transformation for measurable impact.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Link href="/contact">
-            <Button size="lg" className="bg-accent hover:bg-yellow-600">
+            <Button size="lg" className="bg-accent hover:bg-[#a3832a] text-white">
               Get Started Today
             </Button>
           </Link>
-          <Link href="/services">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              Learn More
-            </Button>
+          <Link href="/services" className="inline-flex items-center text-gray-300 hover:text-white transition-colors text-base font-medium gap-1 justify-center py-3">
+            Learn More &rarr;
           </Link>
         </div>
 
         {/* Trust indicators */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-blue-400">
-          <div>
-            <div className="text-4xl font-bold mb-2">15+</div>
-            <p className="text-blue-100">Years of Experience</p>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-2">500+</div>
-            <p className="text-blue-100">Clients Served</p>
-          </div>
-          <div>
-            <div className="text-4xl font-bold mb-2">$2B+</div>
-            <p className="text-blue-100">Assets Managed</p>
+        <div className="border-t border-white/15 pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-2xl font-serif text-accent mb-1">15+</div>
+              <p className="text-gray-400 text-sm">Years of Experience</p>
+            </div>
+            <div>
+              <div className="text-2xl font-serif text-accent mb-1">500+</div>
+              <p className="text-gray-400 text-sm">Clients Served</p>
+            </div>
+            <div>
+              <div className="text-2xl font-serif text-accent mb-1">$2B+</div>
+              <p className="text-gray-400 text-sm">Assets Managed</p>
+            </div>
           </div>
         </div>
       </div>

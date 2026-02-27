@@ -14,7 +14,7 @@ export const FadeIn = ({ children, delay = 0, duration = 0.5 }: FadeInProps) => 
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay, duration }}
+      transition={{ delay, duration, ease: 'easeOut' }}
       viewport={{ once: true }}
     >
       {children}
@@ -35,14 +35,14 @@ export const SlideIn = ({
   delay = 0,
   duration = 0.5,
 }: SlideInProps) => {
-  const initialX = direction === 'left' ? -100 : direction === 'right' ? 100 : 0
-  const initialY = direction === 'up' ? 100 : direction === 'down' ? -100 : 0
+  const initialY = direction === 'up' ? 20 : direction === 'down' ? -20 : 0
+  const initialX = direction === 'left' ? -20 : direction === 'right' ? 20 : 0
 
   return (
     <motion.div
       initial={{ opacity: 0, x: initialX, y: initialY }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ delay, duration }}
+      transition={{ delay, duration, ease: 'easeOut' }}
       viewport={{ once: true }}
     >
       {children}
@@ -59,9 +59,9 @@ interface ScaleInProps {
 export const ScaleIn = ({ children, delay = 0, duration = 0.5 }: ScaleInProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay, duration, ease: 'easeOut' }}
       viewport={{ once: true }}
     >
       {children}

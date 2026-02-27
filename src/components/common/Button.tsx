@@ -13,22 +13,22 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const variantStyles = {
-      primary: 'bg-primary text-white hover:bg-blue-900 hover:shadow-lg',
-      secondary: 'bg-secondary text-white hover:bg-teal-700 hover:shadow-lg',
-      outline: 'border-2 border-primary text-primary hover:bg-blue-50',
+      primary: 'bg-primary text-white hover:bg-[#243759]',
+      secondary: 'bg-secondary text-white hover:bg-[#4a6180]',
+      outline: 'border-[1.5px] border-primary text-primary hover:bg-primary hover:text-white',
     }
 
     const sizeStyles = {
       sm: 'px-3 py-2 text-sm',
-      md: 'px-6 py-3 text-base',
-      lg: 'px-8 py-4 text-lg',
+      md: 'px-5 py-2.5 text-sm',
+      lg: 'px-7 py-3 text-base',
     }
 
     return (
       <button
         ref={ref}
         className={cn(
-          'font-poppins font-semibold rounded-lg transition-all duration-300',
+          'font-sans font-medium rounded-md transition-all duration-200',
           variantStyles[variant],
           sizeStyles[size],
           className
