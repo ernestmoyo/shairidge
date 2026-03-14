@@ -9,8 +9,8 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-primary">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-primary/90 backdrop-blur-sm">
+      <nav className="container mx-auto px-4 py-2.5 flex items-center justify-between">
         {/* Logo/Brand */}
         <Link href="/" className="font-serif text-2xl text-white">
           {SITE_NAME}

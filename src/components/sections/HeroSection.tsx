@@ -37,7 +37,6 @@ const IconSvg = ({ icon }: { icon: string }) => {
   )
 }
 
-// Quick-link cards that appear alongside service cards
 const extraCards = [
   { name: 'Free Consultation', icon: 'Phone', href: '/contact' },
   { name: 'Meet Our Team', icon: 'Users', href: '/team' },
@@ -60,14 +59,21 @@ export const HeroSection = () => {
   }, [])
 
   return (
-    <section className="bg-primary text-white">
-      <div className="container mx-auto px-4 pt-16 pb-20">
+    <section className="relative text-white overflow-hidden">
+      {/* Background image with dark overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/stock/hero-finance.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-primary/85" />
+
+      <div className="relative z-10 container mx-auto px-4 pt-16 pb-20">
         {/* Heading */}
         <div className="text-center mb-12">
           <h1 className="font-serif text-4xl md:text-[3.25rem] leading-tight mb-4 text-white">
             Healthier business, stronger future
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Strategic financial guidance and business consulting to help you grow with confidence
           </p>
         </div>
@@ -78,7 +84,7 @@ export const HeroSection = () => {
             <Link
               key={service.id}
               href={`/services#${service.slug}`}
-              className="bg-white rounded-xl p-5 flex flex-col items-center text-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-200 group"
+              className="bg-white rounded-xl p-5 flex flex-col items-center text-center gap-3 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
             >
               <div className="text-primary group-hover:text-accent transition-colors">
                 <IconSvg icon={service.icon} />
@@ -92,7 +98,7 @@ export const HeroSection = () => {
             <Link
               key={card.name}
               href={card.href}
-              className="bg-white rounded-xl p-5 flex flex-col items-center text-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-200 group"
+              className="bg-white rounded-xl p-5 flex flex-col items-center text-center gap-3 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
             >
               <div className="text-primary group-hover:text-accent transition-colors">
                 <IconSvg icon={card.icon} />

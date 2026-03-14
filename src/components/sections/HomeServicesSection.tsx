@@ -3,6 +3,7 @@
 import { ServiceCard } from '@/components/cards/ServiceCard'
 import { Button } from '@/components/common/Button'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Service } from '@/types/business'
 
@@ -26,17 +27,27 @@ export const HomeServicesSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* Pill label + heading like Bankrate data report */}
-        <div className="text-center mb-14">
-          <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
-            Our Expertise
-          </span>
-          <h2 className="font-serif text-3xl md:text-[2.5rem] text-primary mb-4">
-            Comprehensive Solutions for Your Business
-          </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
-            From financial management to digital transformation, we deliver results that matter
-          </p>
+        {/* Header with image */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-14">
+          <div>
+            <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
+              Our Expertise
+            </span>
+            <h2 className="font-serif text-3xl md:text-[2.5rem] text-primary mb-4">
+              Comprehensive Solutions for Your Business
+            </h2>
+            <p className="text-gray-500">
+              From financial management to digital transformation, we deliver results that matter. Our team brings decades of experience to every engagement.
+            </p>
+          </div>
+          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/stock/financial-charts.jpg"
+              alt="Financial analysis and charts"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* Services Grid */}

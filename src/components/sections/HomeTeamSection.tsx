@@ -24,8 +24,15 @@ export const HomeTeamSection = () => {
   }, [])
 
   return (
-    <section className="py-20 bg-surface">
-      <div className="container mx-auto px-4">
+    <section className="relative py-20 overflow-hidden">
+      {/* Background image with overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/stock/team-meeting.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-white/95" />
+
+      <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">
           <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
