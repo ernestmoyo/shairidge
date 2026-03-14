@@ -21,11 +21,11 @@ export const NAVIGATION_LINKS = [
 
 // Colors
 export const COLORS = {
-  primary: '#1A2B4A',
+  primary: '#0d1f4c',
   secondary: '#3B4F6B',
   accent: '#B8962E',
-  dark: '#1C1C1E',
-  light: '#F8F7F4',
+  dark: '#0a1931',
+  light: '#ffffff',
 }
 
 // Contact Information (to be filled from business documents)

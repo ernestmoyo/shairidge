@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1A2B4A;
+  --primary: #0d1f4c;
   --secondary: #3B4F6B;
   --accent: #B8962E;
   --text-dark: #2C3E50;
-  --bg-light: #F8F7F4;
-  --bg-alt: #F0EDE8;
-  --charcoal: #1C1C1E;
+  --bg-light: #ffffff;
+  --bg-alt: #F8F7F4;
+  --charcoal: #0a1931;
 }
 
 * {
@@ -25,7 +25,7 @@ html {
 body {
   font-family: var(--font-inter), 'Inter', sans-serif;
   color: var(--text-dark);
-  background-color: var(--bg-light);
+  background-color: #ffffff;
   line-height: 1.7;
 }
 

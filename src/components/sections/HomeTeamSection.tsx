@@ -2,7 +2,6 @@
 
 import { TeamCard } from '@/components/cards/TeamCard'
 import { Button } from '@/components/common/Button'
-import { ScaleIn } from '@/components/common/Animations'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { TeamMember } from '@/types/business'
@@ -15,7 +14,7 @@ export const HomeTeamSection = () => {
       try {
         const response = await fetch('/data/team.json')
         const data = await response.json()
-        setTeam(data.slice(0, 2)) // Show first 2 team members
+        setTeam(data.slice(0, 2))
       } catch (error) {
         console.error('Failed to load team:', error)
       }
@@ -25,10 +24,13 @@ export const HomeTeamSection = () => {
   }, [])
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-surface">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-14">
+          <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
+            Our Leadership
+          </span>
           <h2 className="font-serif text-3xl md:text-[2.5rem] text-primary mb-4">
             Meet Our Team
           </h2>
@@ -38,11 +40,9 @@ export const HomeTeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {team.map((member, idx) => (
-            <ScaleIn key={member.id} delay={idx * 0.1} duration={0.5}>
-              <TeamCard member={member} />
-            </ScaleIn>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {team.map((member) => (
+            <TeamCard key={member.id} member={member} />
           ))}
         </div>
 

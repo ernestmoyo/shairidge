@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#1A2B4A',
+        primary: '#0d1f4c',
         secondary: '#3B4F6B',
         accent: '#B8962E',
         surface: '#F8F7F4',
         'surface-alt': '#F0EDE8',
-        charcoal: '#1C1C1E',
+        charcoal: '#0a1931',
       },
       fontFamily: {
         serif: ['var(--font-dm-serif)', 'serif'],

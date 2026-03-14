@@ -28,7 +28,7 @@ const IconSvg = ({ icon }: { icon: string }) => {
   }
 
   return (
-    <div className="text-secondary">
+    <div className="text-primary">
       {iconMap[icon] || (
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/></svg>
       )}
@@ -38,9 +38,9 @@ const IconSvg = ({ icon }: { icon: string }) => {
 
 export const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-subtle hover:shadow-card transition-all duration-200 p-7 h-full flex flex-col border border-gray-100">
+    <div className="bg-white rounded-xl border border-gray-100 shadow-card hover:shadow-lg transition-all duration-200 p-7 h-full flex flex-col">
       {/* Icon */}
-      <div className="mb-4">
+      <div className="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center mb-5">
         <IconSvg icon={service.icon} />
       </div>
 
@@ -68,9 +68,10 @@ export const ServiceCard = ({ service }: ServiceCardProps) => {
       {/* CTA */}
       <Link
         href={`/services#${service.slug}`}
-        className="inline-flex items-center text-sm font-medium text-primary border border-primary rounded-md px-4 py-2 text-center justify-center hover:bg-primary hover:text-white transition-all duration-200"
+        className="inline-flex items-center text-sm font-medium text-primary hover:text-accent transition-colors gap-1"
       >
         Learn More
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </Link>
     </div>
   )

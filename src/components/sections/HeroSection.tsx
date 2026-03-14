@@ -1,53 +1,107 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Button } from '@/components/common/Button'
+import { Service } from '@/types/business'
+
+const IconSvg = ({ icon }: { icon: string }) => {
+  const iconMap: Record<string, JSX.Element> = {
+    LineChart: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+    ),
+    Briefcase: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    ),
+    DollarSign: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    ),
+    TrendingUp: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+    ),
+    Shield: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+    ),
+    Cpu: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+    ),
+    Phone: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    ),
+    Users: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    ),
+  }
+
+  return iconMap[icon] || (
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/></svg>
+  )
+}
+
+// Quick-link cards that appear alongside service cards
+const extraCards = [
+  { name: 'Free Consultation', icon: 'Phone', href: '/contact' },
+  { name: 'Meet Our Team', icon: 'Users', href: '/team' },
+]
 
 export const HeroSection = () => {
+  const [services, setServices] = useState<Service[]>([])
+
+  useEffect(() => {
+    const loadServices = async () => {
+      try {
+        const response = await fetch('/data/services.json')
+        const data = await response.json()
+        setServices(data)
+      } catch (error) {
+        console.error('Failed to load services:', error)
+      }
+    }
+    loadServices()
+  }, [])
+
   return (
-    <section className="relative bg-primary text-white flex items-center justify-center overflow-hidden" style={{ minHeight: '80vh' }}>
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.04]">
-        <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%)', backgroundSize: '60px 60px', backgroundPosition: '0 0, 30px 30px' }}></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center py-16">
-        <h1 className="font-serif text-4xl md:text-[3.5rem] leading-tight mb-6">
-          Driving Growth Through Strategy,<br />Finance & Digital Innovation
-        </h1>
-
-        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
-          We help businesses strengthen financial discipline, optimize operations, and embrace digital transformation for measurable impact.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Link href="/contact">
-            <Button size="lg" className="bg-accent hover:bg-[#a3832a] text-white">
-              Get Started Today
-            </Button>
-          </Link>
-          <Link href="/services" className="inline-flex items-center text-gray-300 hover:text-white transition-colors text-base font-medium gap-1 justify-center py-3">
-            Learn More &rarr;
-          </Link>
+    <section className="bg-primary text-white">
+      <div className="container mx-auto px-4 pt-16 pb-20">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h1 className="font-serif text-4xl md:text-[3.25rem] leading-tight mb-4 text-white">
+            Healthier business, stronger future
+          </h1>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Strategic financial guidance and business consulting to help you grow with confidence
+          </p>
         </div>
 
-        {/* Trust indicators */}
-        <div className="border-t border-white/15 pt-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-2xl font-serif text-accent mb-1">15+</div>
-              <p className="text-gray-400 text-sm">Years of Experience</p>
-            </div>
-            <div>
-              <div className="text-2xl font-serif text-accent mb-1">500+</div>
-              <p className="text-gray-400 text-sm">Clients Served</p>
-            </div>
-            <div>
-              <div className="text-2xl font-serif text-accent mb-1">$2B+</div>
-              <p className="text-gray-400 text-sm">Assets Managed</p>
-            </div>
-          </div>
+        {/* Icon Card Grid - 4 columns like Bankrate */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          {services.map((service) => (
+            <Link
+              key={service.id}
+              href={`/services#${service.slug}`}
+              className="bg-white rounded-xl p-5 flex flex-col items-center text-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-200 group"
+            >
+              <div className="text-primary group-hover:text-accent transition-colors">
+                <IconSvg icon={service.icon} />
+              </div>
+              <span className="text-primary text-sm font-medium leading-tight">
+                {service.name}
+              </span>
+            </Link>
+          ))}
+          {extraCards.map((card) => (
+            <Link
+              key={card.name}
+              href={card.href}
+              className="bg-white rounded-xl p-5 flex flex-col items-center text-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-200 group"
+            >
+              <div className="text-primary group-hover:text-accent transition-colors">
+                <IconSvg icon={card.icon} />
+              </div>
+              <span className="text-primary text-sm font-medium leading-tight">
+                {card.name}
+              </span>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
